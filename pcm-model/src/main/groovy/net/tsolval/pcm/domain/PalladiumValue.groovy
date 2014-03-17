@@ -12,17 +12,22 @@ import org.codehaus.groovy.runtime.ArrayUtil
  * @author tsolval
  */
 class PalladiumValue {
-	int[] baseValue
-	int[] bonusValue
+	int[] base
+	int[] bonus
+	int[] penalty
 
 	PalladiumValue(int ... baseValues) {
-		setBaseValue(baseValues)
+		setBase(baseValues)
 	}
 
+	/** Calculates the integer value by adding the base numbers to the bonus numbers and subtracting penalty numbers.  */
 	int getValue() {
 		int sum = 0
-		for(int i : ArrayUtils.addAll(baseValue, bonusValue)) {
+		for(int i : ArrayUtils.addAll(base, bonus)) {
 			sum += i
+		}
+		for (int i: penalty) {
+			sum -= i
 		}
 		sum
 	}
