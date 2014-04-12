@@ -1,8 +1,8 @@
 package net.tsolval.pcm.domain
 
 import static org.junit.Assert.*
-import net.tsolval.dice.Dice
 
+import net.tsolval.dice.Dice
 import org.junit.Test
 
 /**
@@ -58,6 +58,5 @@ class PalladiumCharacterTest {
 	}
 
 	@Test void testStats(){
-		
 	}
 }
