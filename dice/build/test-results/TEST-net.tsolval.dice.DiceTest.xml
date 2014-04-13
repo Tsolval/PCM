@@ -1,0 +1,9 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="net.tsolval.dice.DiceTest" tests="3" failures="0" errors="0" timestamp="2014-04-12T23:19:33" hostname="SlackBookPro.local" time="0.0020">
+  <properties/>
+  <testcase name="testRollIntInt" classname="net.tsolval.dice.DiceTest" time="0.0010"/>
+  <testcase name="testSum" classname="net.tsolval.dice.DiceTest" time="0.0"/>
+  <testcase name="testRollInt" classname="net.tsolval.dice.DiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
