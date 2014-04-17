@@ -12,23 +12,28 @@ import org.codehaus.groovy.runtime.ArrayUtil
  * @author tsolval
  */
 class PalladiumValue {
-	int[] base
-	int[] bonus
-	int[] penalty
+	List<Integer> base = [0]
+	Map<String, Integer> bonusMap = [nullproof:0]
+	Map<String, Integer> penaltyMap = [nullproof:0]
 
-	PalladiumValue(int ... baseValues) {
-		setBase(baseValues)
+	PalladiumValue(int... baseValues) {
+		setBase(baseValues.toList())
 	}
 
-	/** Calculates the integer value by adding the base numbers to the bonus numbers and subtracting penalty numbers.  */
+	PalladiumValue(String bonusReason, int bonusValue) {
+		bonusMap << [bonusReason:bonusValue]
+	}
+
+	def addBonus(String bonusReason, Integer bonus) {
+		bonusMap << [(bonusReason):(bonus)]
+	}
+
+	def addPenalty(String penaltyReason, Integer penalty){
+		penaltyMap << [(penaltyReason):(penalty)]
+	}
+
+	/** Calculates the integer value by adding the base numbers to the bonus numbers and subtracting penalty numbers. */
 	int getValue() {
-		int sum = 0
-		for(int i : ArrayUtils.addAll(base, bonus)) {
-			sum += i
-		}
-		for (int i: penalty) {
-			sum -= i
-		}
-		sum
+		base.sum()+bonusMap.values().sum()-penaltyMap.values().sum()
 	}
 }

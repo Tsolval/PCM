@@ -1,8 +1,8 @@
 package net.tsolval.pcm.domain
 
 import static org.junit.Assert.*
-
 import net.tsolval.dice.Dice
+
 import org.junit.Test
 
 /**
@@ -58,5 +58,16 @@ class PalladiumCharacterTest {
 	}
 
 	@Test void testStats(){
+		character.stats << ["save vs psionic":new PalladiumValue("ME Bonus", 2)]
+		character.stats << ["save vs insanity":new PalladiumValue("ME Bonus", 2)]
+		character.stats << ["parry":new PalladiumValue("PP Bonus", 3)]
+		character.stats << ["dodge":new PalladiumValue("PP Bonus", 3)]
+		character.stats << ["strike":new PalladiumValue("PP Bonus", 3)]
+		
+		assertNotNull("Character stats are not null", character.stats)
+		assertEquals("Character does not have 5 stats", 5, character.stats.size())
+		assertNotNull("Character does not have save vs insanity!",character.stats["save vs insanity"])
+		assertEquals("Character insanity save is not 2!", 2, character.stats["save vs insanity"].getValue())
+
 	}
 }
