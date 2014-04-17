@@ -7,8 +7,8 @@
  * user guide available at http://gradle.org/docs/1.10/userguide/tutorial_java_projects.html
  */
 
-apply plugin: 'groovy'
 apply plugin: 'eclipse'
+apply plugin: 'groovy'
 
 repositories {
    mavenCentral()
