@@ -3,7 +3,8 @@
 	<wb-module deploy-name="pcm-web">
 		<property name="context-root" value="pcm-web"/>
 		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/groovy"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/groovy"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/groovy"/>
+		<wb-resource deploy-path="/" source-path="src/main/webapp"/>
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/tsolval/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.0.3.RELEASE/782a71a312dc307fa531023aa66247b9b4a109d/spring-context-4.0.3.RELEASE.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
