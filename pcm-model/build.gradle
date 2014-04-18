@@ -11,6 +11,7 @@ apply plugin: 'eclipse'
 apply plugin: 'groovy'
 
 repositories {
+   mavenLocal()
    mavenCentral()
 }
 
@@ -37,4 +38,6 @@ dependencies {
    testCompile 'junit:junit:latest.release'
    // Spring Test Dependencies
    testCompile 'org.springframework:spring-test:latest.release'
+   // get Dice jar from local maven repo
+   testCompile 'net.tsolval:dice:1.0'
 }
