@@ -22,6 +22,9 @@ dependencies {
    compile 'org.springframework:spring-framework-bom:latest.release'
    // Spring context
    compile 'org.springframework:spring-context:latest.release'
+   // Spring web
+   compile 'org.springframework:spring-web:latest.release'
+   compile 'org.springframework:spring-webmvc:latest.release'
    // SLF4J Logging (included with gradle init)
    compile 'org.slf4j:slf4j-api:latest.release'
    // Apache Commons
